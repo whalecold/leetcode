@@ -53,7 +53,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::Solution;
 
     #[test]
     fn test_343() {
