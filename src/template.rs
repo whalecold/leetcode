@@ -15,7 +15,7 @@ __PROBLEM_DEFAULT_CODE__
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::Solution;
 
     #[test]
     fn test___PROBLEM_ID__() {
