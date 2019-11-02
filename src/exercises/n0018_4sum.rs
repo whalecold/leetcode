@@ -29,6 +29,7 @@ static NEED_COMPILE: bool = false;
 struct Solution {}
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn four_sum(nums: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         let mut ret = vec![];
         if nums.len() < 4 {

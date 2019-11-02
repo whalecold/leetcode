@@ -28,6 +28,7 @@ static NEED_COMPILE: bool = false;
 struct Solution {}
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn search_range(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut ret = vec![-1, -1];
         if nums.len() == 0 || nums.first().unwrap() > &target || nums.last().unwrap() < &target {
