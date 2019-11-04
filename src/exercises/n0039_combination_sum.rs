@@ -46,7 +46,7 @@ struct Solution {}
 impl Solution {
     #[allow(dead_code)]
     pub fn combination_sum(candidates: &Vec<i32>, target: i32) -> Vec<Vec<i32>> {
-        let mut candidates = candidates.clone();
+        let candidates = candidates.clone();
         let mut result = vec![];
         let mut combination = vec![];
         Solution::combination_sum1(&candidates, target, &mut result, &mut combination, 0);
