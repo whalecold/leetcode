@@ -33,6 +33,7 @@ mod n0221_maximal_square;
 mod n0258_add_digits;
 mod n0263_ugly_number;
 mod n0264_ugly_number_ii;
+mod n0268_missing_number;
 mod n0279_perfect_squares;
 mod n0300_longest_increasing_subsequence;
 mod n0309_best_time_to_buy_and_sell_stock_with_cool_down;
