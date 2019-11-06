@@ -13,6 +13,7 @@ mod n0034_find_first_and_last_position_of_element_in_sorted_array;
 mod n0035_search_insert_position;
 mod n0039_combination_sum;
 mod n0041_first_missing_positive;
+mod n0042_trapping_rain_water;
 mod n0053_maximum_subarray;
 mod n0062_unique_paths;
 mod n0063_unique_paths_ii;
