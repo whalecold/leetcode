@@ -31,6 +31,7 @@ mod n0198_house_robber;
 mod n0202_happy_number;
 mod n0213_house_robber_ii;
 mod n0221_maximal_square;
+mod n0238_product_of_array_except_self;
 mod n0258_add_digits;
 mod n0263_ugly_number;
 mod n0264_ugly_number_ii;
