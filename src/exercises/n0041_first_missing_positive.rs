@@ -49,7 +49,6 @@ impl Solution {
                 nums.swap(i, j);
             }
         }
-        println!("{:?}", nums);
         for i in 0..nums.len() {
             if nums[i] != i as i32 + 1 {
                 return i as i32 + 1;

@@ -47,6 +47,8 @@ mod n0377_combination_sum_iv;
 mod n0392_is_subsequence;
 mod n0413_arithmetic_slices;
 mod n0416_partition_equal_subset_sum;
+mod n0442_find_all_duplicates_in_an_array;
+mod n0448_find_all_numbers_disappeared_in_an_array;
 mod n0474_ones_and_zeroes;
 mod n0494_target_sum;
 mod n0516_longest_palindromic_subsequence;
