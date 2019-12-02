@@ -40,6 +40,9 @@ impl Solution {
             if i > max_index {
                 return false;
             }
+            if max_index + 1 >= nums.len() {
+                return true
+            }
             if i + nums[i] as usize > max_index {
                 max_index = i + nums[i] as usize;
             }
