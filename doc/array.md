@@ -75,5 +75,12 @@
   + 这步就要看怎么把空间复杂度降下来了，如果想把空间复杂度降下来只有一个办法，就是去调整原来的 nums 的数组，
   就需要不断的把符合要求的数 `0 < num <= nums.len()` 放在对应的坐标上去。最后判断还是和原来差不多。
 
+#### [merge_intervals](../src/exercises/n0056_merge_intervals.rs):
+- 关键点是要先排序，这样的话就会把问题变的简单，就保证了 ret 的数组来说每次的 `intervals[i].first`
+肯定是要大于 `ret.last.first`，然后看看是否 overlap，不是的话直接 push, 是的话也只需要对比 `intervals[i].end` 和 `ret.last.end` 
+并让 `ret.last.end` 取最大值即可。
 
+#### [non_overlapping_intervals](../src/exercises/n0435_non_overlapping_intervals.rs):
+- 这题的思路和 `merge_intervals` 基本一致，差别在于对于 `intervals[i].end` 和 `ret.last.end` 要去最小值，
+这样可以最大程度上的避免 overlap.
 
