@@ -84,3 +84,35 @@
 - 这题的思路和 `merge_intervals` 基本一致，差别在于对于 `intervals[i].end` 和 `ret.last.end` 要去最小值，
 这样可以最大程度上的避免 overlap.
 
+### [A Linear Time Majority Vote Algorithm](http://www.cs.utexas.edu/~moore/best-ideas/mjrty/)
+
+#### [majority_element](../src/exercises/n0169_majority_element.rs):
+- 这是一道 `easy` 的问题，确实很简单，一眼就知道可以用 `hash_map` 来解决，但是稍作思考的话会发现在 
+```
+You may assume that the array is non-empty and the majority element always exist in the array.
+```
+这种条件下中位数肯定就是要取的值了，就很顺当的有了一下答案：
+```
+        let mut nums = nums;
+        nums.sort();
+        nums[nums.len() / 2]
+```
+很简单，就三行，时间复杂度是 `n * log n`，然后取看了下 discuss，发现有个很精彩的答案：
+```
+        let (mut major, mut count) = (nums[0], 1);
+        for i in 1..nums.len() {
+            if count == 0 {
+                count == 1;
+                major = nums[i];
+            } else if major == nums[i] {
+                count += 1;
+            } else {
+                count -= 1;
+            }
+        }
+        major
+```
+
+linear time and O(1) space。看了一小会儿才看懂，在假设的这种情况下，majority element 的 count 足以抵消剩余 element 的负面影响（-1）;
+但是知其然不知其所以然，假如遇到 majority element nums > 1/3 的情况下又该怎么办了，所以有了上面的那篇论文。
+另外一篇文章，[摩尔投票法](https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html)
