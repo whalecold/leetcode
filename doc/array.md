@@ -116,3 +116,16 @@ You may assume that the array is non-empty and the majority element always exist
 linear time and O(1) space。看了一小会儿才看懂，在假设的这种情况下，majority element 的 count 足以抵消剩余 element 的负面影响（-1）;
 但是知其然不知其所以然，假如遇到 majority element nums > 1/3 的情况下又该怎么办了，所以有了上面的那篇论文。
 另外一篇文章，[摩尔投票法](https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html)
+
+#### [set_matrix_zeroes](../src/exercises/n0073_set_matrix_zeroes.rs):
+- 这道题目的思路应该是遍历两遍，第一遍打上标记，第二遍去 set zero. 如果第一遍就去 set zero 的话就会污染后面的数据，导致 0 的个数不准确。这样的话
+时间复杂度基本就可以确定了，为 O(m * n)，主要的问题在于用来存储标记的空间复杂度。虽然题目上要求了 `Do it in-place`，我们还是一步一步的来优化。
+- 首先最简单的就是用 `m * n` 的 space 去存储标记，`store[m][n]`, 然后第二次去遍历的时候根据这个来 `set zero`. 但是稍微仔细一点就会发现这里面有很多
+的空间就是浪费的，每 col 或者 row 只要有一个为 0, 那么所有的 row 或者 col 就全部为 0，所以我们把 `store[m][n]` 优化为 `row[m]` 和 `col[n]`,具体的
+含义就是某行或者某列是否存在一个数为 0，这时候空间复杂度就优化为了 O(m+n). 接下来时候还有优化的空间吗，答案肯定是有，我们可以把这个标记直接放到 native matrix 上去，
+这样我们的空间复杂度就是 constant 的了。但是需要注意一点，就是因为标记存在了 `matrix[0][j]` 和 `matrix[i][0]` 这两个地方，所以需要对这两组数据做特殊处理，
+`matrix[0][j]` 放到了遍历的最后，而 `matrix[i][0]` 则单独用了一个标记为来表示是否存在 0.
+
+
+#### [search_a_2d_matrix_ii](../src/exercises/n0240_search_a_2d_matrix_ii.rs):
+- 线性时间复杂度，找到顺序的平衡点
