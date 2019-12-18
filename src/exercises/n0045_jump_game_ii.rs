@@ -48,6 +48,7 @@ impl Solution {
         }
         solutions[0] as i32
     }
+    #[allow(dead_code)]
     pub fn jump1(nums: Vec<i32>) -> i32 {
         let (mut cur_end, mut jumps, mut farthest) = (0 as usize, 0, 0 as usize);
         for i in 0..(nums.len() - 1) {

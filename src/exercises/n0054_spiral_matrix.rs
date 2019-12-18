@@ -34,6 +34,7 @@ static NEED_COMPILE: bool = false;
 struct Solution {}
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {
         let mut result = Vec::new();
         if matrix.len() < 1 {

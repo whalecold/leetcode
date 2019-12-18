@@ -1,5 +1,3 @@
-use std::borrow::Borrow;
-
 /**
  * [118] Pascal's Triangle
  *

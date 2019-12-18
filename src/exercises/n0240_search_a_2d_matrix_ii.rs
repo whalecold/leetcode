@@ -33,7 +33,7 @@ impl Solution {
         }
         let (rows, cols) = (matrix.len(), matrix[0].len());
         let (mut i, mut j) = (0 as usize, cols - 1);
-        while i < rows && j >= 0 {
+        while i < rows {
             if matrix[i][j] == target {
                 return true;
             }
@@ -47,6 +47,7 @@ impl Solution {
     }
 }
 
+#[allow(dead_code)]
 struct TestCase {
     matrix: Vec<Vec<i32>>,
     target: i32,

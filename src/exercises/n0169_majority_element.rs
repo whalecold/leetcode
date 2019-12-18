@@ -34,7 +34,7 @@ impl Solution {
         let (mut major, mut count) = (nums[0], 1);
         for i in 1..nums.len() {
             if count == 0 {
-                count == 1;
+                count = 1;
                 major = nums[i];
             } else if major == nums[i] {
                 count += 1;

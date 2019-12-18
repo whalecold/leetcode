@@ -49,6 +49,7 @@ impl Solution {
         }
         ret
     }
+    #[allow(dead_code)]
     pub fn product_except_self1(nums: Vec<i32>) -> Vec<i32> {
         let mut ret = vec![1; nums.len()];
         let (mut left, mut right) = (1, 1);

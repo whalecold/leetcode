@@ -26,6 +26,7 @@ static NEED_COMPILE: bool = false;
 struct Solution {}
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn majority_element_ii(nums: Vec<i32>) -> Vec<i32> {
         let mut ret = vec![];
         if nums.len() == 0 {
