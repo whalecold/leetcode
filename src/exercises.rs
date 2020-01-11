@@ -1,7 +1,9 @@
 mod n0001_two_sum;
+//mod n0002_add_two_numbers;
 mod n0004_median_of_two_sorted_arrays;
 mod n0005_longest_palindromic_substring;
 mod n0011_container_with_most_water;
+mod n0014_longest_common_prefix;
 mod n0015_3sum;
 mod n0016_3sum_closest;
 mod n0018_4sum;
@@ -41,6 +43,7 @@ mod n0122_best_time_to_buy_and_sell_stock_ii;
 mod n0127_word_ladder;
 mod n0139_work_break;
 mod n0152_maximum_product_subarray;
+mod n0162_find_peak_element;
 mod n0167_two_sum_ii_input_array_is_sorted;
 mod n0169_majority_element;
 mod n0189_rotate_array;
