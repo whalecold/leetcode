@@ -1,5 +1,3 @@
-use std::ops::Index;
-
 /**
  * [14] Longest Common Prefix
  *
