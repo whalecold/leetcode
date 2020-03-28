@@ -49,7 +49,7 @@ impl Solution {
     pub fn combination_sum2(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         let mut candidates = candidates;
         let mut ret = vec![];
-        let mut one = vec![];
+        let one = vec![];
         candidates.sort();
         Solution::combination(&candidates, 0, target, one, &mut ret);
         ret
@@ -82,7 +82,7 @@ impl Solution {
                 one.clone(),
                 result,
             );
-            one.remove(one.len() - 1);
+            one.pop();
         }
     }
 }
