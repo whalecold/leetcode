@@ -26,6 +26,7 @@ struct Solution {}
 
 impl Solution {
     #[allow(dead_code)]
+    // TODO optimize time complexity
     pub fn partition(s: String) -> Vec<Vec<String>> {
         let (mut ret, temp) = (vec![], vec![]);
         Solution::backtrack(&s, &mut ret, 0, temp);

@@ -47,7 +47,7 @@ impl Solution {
     #[allow(dead_code)]
     pub fn combination_sum(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         let mut result = vec![];
-        let mut combination = vec![];
+        let combination = vec![];
         Solution::backtrack(&candidates, target, &mut result, combination, 0);
         result
     }
@@ -66,7 +66,6 @@ impl Solution {
             return;
         }
         let mut combination = combination;
-        let mut i = begin;
         for i in begin..candidates.len() {
             combination.push(candidates[i]);
             Solution::backtrack(

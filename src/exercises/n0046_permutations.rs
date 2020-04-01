@@ -30,7 +30,7 @@ impl Solution {
     #[allow(dead_code)]
     pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut ret = vec![];
-        let mut temp = vec![];
+        let temp = vec![];
         Solution::backtrack(&nums, &mut ret, temp);
         ret
     }
