@@ -49,7 +49,10 @@ impl Solution {
     #[allow(dead_code)]
     pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
         // 主要是利用了双下标的方法
-        let clone = Some(Box::new(ListNode { val: 0, next: head.clone() }));
+        let clone = Some(Box::new(ListNode {
+            val: 0,
+            next: head.clone(),
+        }));
         let mut dummy_head = Some(Box::new(ListNode { val: 0, next: head }));
 
         let (mut fast, mut slow) = (clone.as_ref(), dummy_head.as_mut());
