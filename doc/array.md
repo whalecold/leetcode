@@ -129,3 +129,7 @@ linear time and O(1) space。看了一小会儿才看懂，在假设的这种情
 
 #### [search_a_2d_matrix_ii](../src/exercises/n0240_search_a_2d_matrix_ii.rs):
 - 线性时间复杂度，找到顺序的平衡点
+
+#### [move_zeroes](../src/exercises/n0283_move_zeroes.rs):
+ A two-pointer approach could be helpful here. The idea would be to have one pointer for iterating the array and another 
+ pointer that just works on the non-zero elements of the array.

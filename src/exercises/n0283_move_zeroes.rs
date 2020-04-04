@@ -25,6 +25,7 @@ struct Solution {}
 
 impl Solution {
     #[allow(dead_code)]
+    // two-pointer
     pub fn move_zeroes(nums: &mut Vec<i32>) {
         let mut begin = -1;
         for i in 0..nums.len() {
