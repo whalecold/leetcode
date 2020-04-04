@@ -62,7 +62,7 @@ impl Solution {
         if needle.len() > haystack.len() {
             return -1;
         }
-        let kmp = Solution::kmpProcess(&needle);
+        let kmp = Solution::kmp_process(&needle);
         let mut i = 0;
         while i <= haystack.len() - needle.len() {
             let mut j = 0;
@@ -83,7 +83,7 @@ impl Solution {
         }
         -1
     }
-    fn kmpProcess(needle: &String) -> Vec<usize> {
+    fn kmp_process(needle: &String) -> Vec<usize> {
         let mut ret = vec![0; needle.len()];
         let (mut i, mut len) = (1 as usize, 0 as usize);
         while i < needle.len() {
