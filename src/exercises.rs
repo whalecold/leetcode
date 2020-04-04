@@ -88,6 +88,7 @@ mod n0263_ugly_number;
 mod n0264_ugly_number_ii;
 mod n0268_missing_number;
 mod n0279_perfect_squares;
+mod n0283_move_zeroes;
 mod n0300_longest_increasing_subsequence;
 mod n0309_best_time_to_buy_and_sell_stock_with_cool_down;
 mod n0322_coin_change;
