@@ -20,7 +20,7 @@ const QUESTION_QUERY_OPERATION: &str = "questionData";
 pub fn get_problem(id: u32) -> Option<Problem> {
     let problems = get_problems().unwrap();
     for problem in problems.stat_status_pairs.iter() {
-        if problem.stat.question_id == id {
+        if problem.stat.frontend_question_id == id {
             if problem.paid_only {
                 println!("paid_only, get failed");
                 return None;
