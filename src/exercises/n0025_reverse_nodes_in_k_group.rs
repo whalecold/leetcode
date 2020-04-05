@@ -50,6 +50,7 @@ use super::super::utils::linked_list::ListNode;
 // }
 impl Solution {
     // TODO refactor use recursive
+    #[allow(dead_code)]
     pub fn reverse_k_group(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
         let mut dummy_head = Some(Box::new(ListNode { val: 0, next: head }));
         let mut head = dummy_head.as_mut();

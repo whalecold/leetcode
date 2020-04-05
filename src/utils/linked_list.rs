@@ -11,6 +11,7 @@ impl ListNode {
     }
 }
 
+#[allow(dead_code)]
 pub fn to_list(vec: Vec<i32>) -> Option<Box<ListNode>> {
     let mut current = None;
     for &v in vec.iter().rev() {

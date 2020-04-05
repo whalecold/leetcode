@@ -34,22 +34,20 @@ pub struct Solution {}
 impl Solution {
     #[allow(dead_code)]
     pub fn max_profit(prices: Vec<i32>) -> i32 {
-        let mut max_profit = 0;
-        let (mut buy, mut sell) = (0, 0);
+        let (mut max_profit, mut buy, mut sell) = (0, 0 as usize, 0 as usize);
         for i in 0..prices.len() {
             if prices[i] >= prices[sell] {
                 sell = i;
-                if sell == prices.len() - 1 && prices[sell] > prices[buy] {
+                if i == prices.len() - 1 {
                     max_profit += prices[sell] - prices[buy];
                 }
             }
-
             if prices[i] < prices[sell] {
-                if prices[sell] > prices[buy] {
+                if prices[sell] >= prices[buy] {
                     max_profit += prices[sell] - prices[buy];
                 }
-                sell = i;
                 buy = i;
+                sell = i;
             }
         }
         max_profit
@@ -62,6 +60,10 @@ mod tests {
 
     #[test]
     pub fn test_122() {
+        assert_eq!(
+            Solution::max_profit(vec![1, 9, 6, 9, 1, 7, 1, 1, 5, 9, 9]),
+            25
+        );
         assert_eq!(Solution::max_profit(vec![7, 1, 5, 3, 6, 4]), 7);
         assert_eq!(Solution::max_profit(vec![1, 2, 3, 4, 5]), 4);
         assert_eq!(Solution::max_profit(vec![7, 6, 4, 3, 1]), 0);

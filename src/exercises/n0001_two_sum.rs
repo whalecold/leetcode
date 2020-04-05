@@ -28,9 +28,9 @@ impl Solution {
         let mut m = HashMap::with_capacity(nums.len());
         for (i, num) in nums.iter().enumerate() {
             if let Some(index) = m.get(&(target - *num)) {
-                return vec![*index, i as i32]
+                return vec![*index, i as i32];
             }
-            m.insert(num,i as i32);
+            m.insert(num, i as i32);
         }
         vec![]
     }

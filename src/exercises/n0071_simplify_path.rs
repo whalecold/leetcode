@@ -47,6 +47,7 @@ static NEED_COMPILE: bool = false;
 struct Solution {}
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn simplify_path(path: String) -> String {
         const SLASH: char = '/';
         let mut str = vec![];
