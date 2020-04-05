@@ -109,3 +109,7 @@ mod n0494_target_sum;
 mod n0516_longest_palindromic_subsequence;
 mod n0523_continuous_subarray_sum;
 mod n0717_1_bit_and_2_bit_characters;
+mod n1399_count_largest_group;
+mod n1400_construct_k_palindrome_strings;
+mod n1401_circle_and_rectangle_overlapping;
+mod n1402_reducing_dishes;
