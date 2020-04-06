@@ -43,7 +43,7 @@ impl Solution {
                     true
                 }
                 _ => {
-                    m_temp.insert(hash.clone(), vec![strs[i].clone()]);
+                    m_temp.insert(hash, vec![strs[i].clone()]);
                     false
                 }
             };
@@ -58,8 +58,9 @@ impl Solution {
 
     fn str_sort(str: &String) -> Vec<i32> {
         let mut ret = vec![0; 26];
+        let str = str.as_bytes();
         for i in 0..str.len() {
-            ret[str.bytes().nth(i).unwrap() as usize - 97 as usize] += 1;
+            ret[str[i] as usize - 97 as usize] += 1;
         }
         ret
     }

@@ -113,3 +113,6 @@ mod n1399_count_largest_group;
 mod n1400_construct_k_palindrome_strings;
 mod n1401_circle_and_rectangle_overlapping;
 mod n1402_reducing_dishes;
+mod n1403_minimum_subsequence_in_non_increasing_order;
+mod n1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one;
+mod n1405_longest_happy_string;
