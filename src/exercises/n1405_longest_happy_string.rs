@@ -42,6 +42,7 @@ static NEED_COMPILE: bool = false;
 struct Solution {}
 
 impl Solution {
+    // TODO
     // Ref: https://leetcode.com/problems/longest-happy-string/discuss/564277/C%2B%2BJava-a-greater-b-greater-c
     #[allow(dead_code)]
     pub fn longest_diverse_string(a: i32, b: i32, c: i32) -> String {

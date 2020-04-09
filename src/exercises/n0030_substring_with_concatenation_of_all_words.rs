@@ -20,10 +20,10 @@
  * Output: []
  *
  */
+use std::collections::HashMap;
 
 #[allow(dead_code)]
 static NEED_COMPILE: bool = false;
-
 #[allow(dead_code)]
 struct Solution {}
 
@@ -31,51 +31,48 @@ impl Solution {
     #[allow(dead_code)]
     // TODO fix https://leetcode.com/problems/substring-with-concatenation-of-all-words/discuss/13658/Easy-Two-Map-Solution-(C%2B%2BJava)
     pub fn find_substring(s: String, words: Vec<String>) -> Vec<i32> {
-        if words.len() == 0 {
-            return vec![];
+        let mut ret = vec![];
+        if words.len() == 0 || words.len() == 0 || s.len() < words.len() * words[0].len() {
+            return ret;
         }
-        let (mut ret, used, length) = (vec![], vec![false; words.len()], words[0].len());
-        Solution::backtrack(&s, &words, 0, &mut ret, used, &length);
-        ret
-    }
-    fn backtrack(
-        s: &String,
-        words: &Vec<String>,
-        begin: usize,
-        ret: &mut Vec<i32>,
-        used: Vec<bool>,
-        length: &usize,
-    ) {
-        let mut i = begin;
-        let mut used = used;
-        while i + *length <= s.len() {
-            let ss = &s[i..i + *length];
-            println!("ss {} i {} words {:?}", ss, i, words);
-            if let Ok(index) = words.binary_search(&String::from(ss)) {
-                println!("index {} ss {} i {}", index, ss, i);
-                if used[index] {
-                    continue;
+        let (num, length) = (words.len(), words[0].len());
+        let mut counts = HashMap::new();
+        for word in words.iter() {
+            match counts.get_mut(word.as_str()) {
+                Some(value) => {
+                    *value += 1;
                 }
-                used[index] = true;
-                if !used.contains(&false) {
-                    Solution::clean_used(&mut used);
-                    let n = (i - (words.len() - 1) * (*length)) as i32;
-                    if !ret.contains(&n) {
-                        ret.push(n);
+                _ => {
+                    counts.insert(word.as_str(), 1);
+                }
+            }
+        }
+        let s = s.as_str();
+        for i in 0..=(s.len() - num * length) {
+            let mut seen = HashMap::new();
+            let mut j = 0 as usize;
+            while j < num {
+                let (sub, mut v) = (&s[i + j * length..i + (j + 1) * length], 1);
+                match seen.get_mut(sub) {
+                    Some(value) => {
+                        *value += 1;
+                        v = *value;
+                    }
+                    _ => {
+                        seen.insert(sub, 1);
                     }
                 }
-                Solution::backtrack(s, words, i + *length, ret, used.clone(), length);
-                used[index] = false;
+                let c = *counts.get(sub).or(Some(&0)).unwrap();
+                if c == 0 || v > c {
+                    break;
+                }
+                j += 1;
             }
-            Solution::clean_used(&mut used);
-            i += 1;
+            if j == num {
+                ret.push(i as i32);
+            }
         }
-    }
-
-    fn clean_used(used: &mut Vec<bool>) {
-        for i in 0..used.len() {
-            used[i] = false;
-        }
+        ret
     }
 }
 
