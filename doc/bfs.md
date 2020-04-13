@@ -1,4 +1,4 @@
-### 广度优先算法（常被用于计算最短路径等问题）
+### 广度优先算法（常被用于计算最短路径、最小值等问题）
 
 - 广度优先算法常配合队列使用
   + 先把 root 存放到 queue 中，记录 root 元素的个数，这几个 root 记作一个 level。
@@ -24,3 +24,9 @@ jumps 表示层数，farthest 表示当前层可以到达最远的地方， cur_
 元素 `push_back`，并且记录下一层元素的个数 n，这层遍历完成后，根据之前记录的这层个数
 遍历 n 次，每次遍历的时候把查完的元素 `pop_front`，以此往复，知道队列为空或者找到了 end_word
 为止。
+
+
+#### [number_of_islands](../src/exercises/n0200_number_of_islands.rs):
+
+在做 [queue explore](https://leetcode.com/explore/learn/card/queue-stack/231/practical-application-queue/1374/) 的时候遇到这道题目的，当时的背景是 bfs, 所以理所应当的用 bfs 去
+求解了，实际上 dfs 也可以，相对来说过程更清晰。

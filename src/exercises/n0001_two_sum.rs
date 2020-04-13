@@ -18,7 +18,6 @@ use std::collections::HashMap;
 
 #[allow(dead_code)]
 static NEED_COMPILE: bool = false;
-
 #[allow(dead_code)]
 struct Solution {}
 
