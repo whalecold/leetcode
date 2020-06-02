@@ -5,3 +5,5 @@
 - Run `cargo run add --id=xxx` to add problem.
 
 [ref](https://github.com/aylei/leetcode-rust)
+
+还是用 go 在白板上刷了.
