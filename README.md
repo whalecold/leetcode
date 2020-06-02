@@ -6,4 +6,4 @@
 
 [ref](https://github.com/aylei/leetcode-rust)
 
-all solution is in branch https://github.com/whalecold/leetcode/tree/solution
+all solutions are in [branch](https://github.com/whalecold/leetcode/tree/solution)
