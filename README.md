@@ -6,4 +6,5 @@
 
 [ref](https://github.com/aylei/leetcode-rust)
 
-all solutions are in [branch](https://github.com/whalecold/leetcode/tree/solution)
+- rust solutions are in [branch](https://github.com/whalecold/leetcode/tree/rust)
+- golang solutions are in [branch](https://github.com/whalecold/leetcode/tree/golang)
