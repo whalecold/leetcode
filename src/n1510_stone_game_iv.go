@@ -4,9 +4,8 @@
 // 取反就好了！！！
 func winnerSquareGame(n int) bool {
 	dp := make([]bool, n+1)
-	dp[1] = true
-	lastSquare := 2
-	for i := 2; i <= n; i++ {
+	lastSquare := 1
+	for i := 1; i <= n; i++ {
 		if lastSquare*lastSquare == i {
 			dp[i] = true
 			lastSquare += 1
