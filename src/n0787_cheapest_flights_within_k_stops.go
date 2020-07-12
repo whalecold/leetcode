@@ -11,7 +11,7 @@ func findCheapestPrice(n int, flights [][]int, src int, dst int, K int) int {
 	heap.Push(h, []int{src, 0, K + 1})
 
 	for h.Len() != 0 {
-		last := h.Pop().([]int)
+		last := heap.Pop(h).([]int)
 
 		stops, city, price := last[2], last[0], last[1]
 		if city == dst {
@@ -32,7 +32,7 @@ func findCheapestPrice(n int, flights [][]int, src int, dst int, K int) int {
 type intHeap [][]int
 
 func (h intHeap) Len() int           { return len(h) }
-func (h intHeap) Less(i, j int) bool { return h[i][1] > h[j][1] }
+func (h intHeap) Less(i, j int) bool { return h[i][1] < h[j][1] }
 func (h intHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 func (h *intHeap) Push(x interface{}) {
 	*h = append(*h, x.([]int))
