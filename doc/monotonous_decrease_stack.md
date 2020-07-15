@@ -138,14 +138,15 @@ func nextGreaterElements(nums []int) []int {
 
 ## 练习
 
-- [ ] [daily-temperatures](https://leetcode-cn.com/problems/daily-temperatures/)
-- [ ] [remove-k-digits](https://leetcode-cn.com/problems/remove-k-digits/)
-- [ ] [maximal-rectangle](https://leetcode-cn.com/problems/maximal-rectangle/)
-- [ ] [trapping-rain-water](https://leetcode-cn.com/problems/trapping-rain-water/)(challenge)
-- [ ] [remove-duplicate-letters](https://leetcode-cn.com/problems/remove-duplicate-letters/)(challenge)
-- [ ] [create-maximum-number](https://leetcode-cn.com/problems/create-maximum-number/)
-- [ ] [max-chunks-to-make-sorted-ii](https://leetcode-cn.com/problems/max-chunks-to-make-sorted-II/)
-- [ ] [sliding-window-maximum](https://leetcode-cn.com/problems/sliding-window-maximum/)(challenge)
+- [ ] [daily-temperatures](https://leetcode.com/problems/daily-temperatures/)
+- [ ] [remove-k-digits](https://leetcode.com/problems/remove-k-digits/)
+- [ ] [maximal-rectangle](https://leetcode.com/problems/maximal-rectangle/)
+- [ ] [trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/)(challenge)
+- [ ] [remove-duplicate-letters](https://leetcode.com/problems/remove-duplicate-letters/)(challenge)
+- [ ] [create-maximum-number](https://leetcode.com/problems/create-maximum-number/)
+- [ ] [max-chunks-to-make-sorted-ii](https://leetcode.com/problems/max-chunks-to-make-sorted-II/)
+- [ ] [sliding-window-maximum](https://leetcode.com/problems/sliding-window-maximum/)(challenge)
+- [ ] [minimum-cost-tree-from-leaf-values](https://leetcode.com/problems/minimum-cost-tree-from-leaf-values)
 
 ## Ref: 
 - https://leetcode.com/problems/sum-of-subarray-minimums/discuss/178876/stack-solution-with-very-detailed-explanation-step-by-step
