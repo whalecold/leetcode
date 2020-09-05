@@ -67,6 +67,7 @@ struct MyCircularQueue {
  */
 impl MyCircularQueue {
     /** Initialize your data structure here. Set the size of the queue to be k. */
+    #[allow(dead_code)]
     fn new(k: i32) -> Self {
         MyCircularQueue {
             head: -1,
@@ -76,6 +77,7 @@ impl MyCircularQueue {
     }
 
     /** Insert an element into the circular queue. Return true if the operation is successful. */
+    #[allow(dead_code)]
     fn en_queue(&mut self, value: i32) -> bool {
         if self.is_full() {
             return false;
@@ -91,6 +93,7 @@ impl MyCircularQueue {
     }
 
     /** Delete an element from the circular queue. Return true if the operation is successful. */
+    #[allow(dead_code)]
     fn de_queue(&mut self) -> bool {
         if self.is_empty() {
             return false;
@@ -115,6 +118,7 @@ impl MyCircularQueue {
     }
 
     /** Get the last item from the queue. */
+    #[allow(dead_code)]
     fn rear(&self) -> i32 {
         if self.is_empty() {
             -1
@@ -124,11 +128,13 @@ impl MyCircularQueue {
     }
 
     /** Checks whether the circular queue is empty or not. */
+    #[allow(dead_code)]
     fn is_empty(&self) -> bool {
         self.head == self.tail && self.head == -1
     }
 
     /** Checks whether the circular queue is full or not. */
+    #[allow(dead_code)]
     fn is_full(&self) -> bool {
         self.head != -1 && (self.tail + 1) % self.vec.len() as i32 == self.head
     }

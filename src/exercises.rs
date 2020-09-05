@@ -113,6 +113,7 @@ mod n0448_find_all_numbers_disappeared_in_an_array;
 mod n0474_ones_and_zeroes;
 mod n0494_target_sum;
 mod n0516_longest_palindromic_subsequence;
+mod n0520_detect_capital;
 mod n0523_continuous_subarray_sum;
 mod n0525_contiguous_array;
 mod n0542_01_matrix;

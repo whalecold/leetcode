@@ -35,6 +35,7 @@ static NEED_COMPILE: bool = false;
 #[allow(dead_code)]
 struct Solution {}
 
+#[allow(dead_code)]
 struct MinStack {
     vec: Vec<i32>,
     min: i32,
@@ -47,6 +48,7 @@ struct MinStack {
  */
 impl MinStack {
     /** initialize your data structure here. */
+    #[allow(dead_code)]
     fn new() -> Self {
         MinStack {
             vec: Vec::new(),
@@ -54,6 +56,7 @@ impl MinStack {
         }
     }
 
+    #[allow(dead_code)]
     fn push(&mut self, x: i32) {
         if x <= self.min {
             self.vec.push(self.min);
@@ -62,16 +65,19 @@ impl MinStack {
         self.vec.push(x);
     }
 
+    #[allow(dead_code)]
     fn pop(&mut self) {
         if self.vec.pop().unwrap() == self.min {
             self.min = self.vec.pop().unwrap();
         }
     }
 
+    #[allow(dead_code)]
     fn top(&self) -> i32 {
         *self.vec.last().unwrap()
     }
 
+    #[allow(dead_code)]
     fn get_min(&self) -> i32 {
         self.min
     }

@@ -1,4 +1,3 @@
-use console::colors_enabled;
 /**
  * [18] 4Sum
  *
@@ -71,10 +70,11 @@ impl Solution {
         }
         ret
     }
+
+    #[allow(dead_code)]
     pub fn min_number_of_frogs(croak_of_frogs: String) -> i32 {
         let mut deque = vec![VecDeque::new(); 5];
         let mut set = HashMap::new();
-        let mut ret = 0;
         set.insert('c', 0 as usize);
         set.insert('r', 1 as usize);
         set.insert('o', 2 as usize);

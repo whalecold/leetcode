@@ -34,6 +34,7 @@ static NEED_COMPILE: bool = false;
 struct Solution {}
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn last_stone_weight(stones: Vec<i32>) -> i32 {
         if stones.len() == 0 {
             return 0;

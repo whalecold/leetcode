@@ -42,7 +42,9 @@ impl Solution {
         for index in 1..strs.len() {
             for i in 0..cs.len() {
                 if i >= strs[index].len() || strs[index].as_bytes()[i] != cs.as_bytes()[i] {
-                    cs.split_off(i);
+                    #[allow(unused_must_use)] {
+                        cs.split_off(i);
+                    }
                     break;
                 }
             }
