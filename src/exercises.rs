@@ -82,6 +82,7 @@ mod n0198_house_robber;
 mod n0200_number_of_islands;
 mod n0202_happy_number;
 mod n0213_house_robber_ii;
+mod n0215_kth_largest_element_in_an_array;
 mod n0220_contains_duplicate_iii;
 mod n0221_maximal_square;
 mod n0225_implement_stack_using_queues;
